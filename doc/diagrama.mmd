@@ -1,0 +1,107 @@
+classDiagram
+
+class Miembro
+Miembro: +id
+Miembro: +habilitado
+Miembro: +lista  
+
+Miembro o-- Reserva
+Reserva <|-- Pago
+
+class Usuario
+Usuario: +nombre
+Usuario: +apellido
+Usuario: +email
+Usuario: +contraseña
+
+Usuario <|-- Miembro
+Usuario <|-- Invitado
+
+class Invitado
+Invitado: +edad
+
+class Cine
+Cine: +nombre
+
+Sedes *-- Pelicula
+Cine *-- Miembro
+
+class Sedes
+Sedes: +nombre
+Sedes: +direccion
+Sedes: +salas
+Sedes *-- Cine
+
+
+class Ciudad
+Ciudad: +nroSedes
+
+class Pelicula 
+Pelicula: +titulo
+Pelicula: +descripcion
+Pelicula: +idioma
+Pelicula: +genero
+Pelicula: +lanzamiento
+Pelicula: +calidad
+Pelicula: +duracion
+Pelicula: administrador()
+
+
+Sedes o-- Proyeccion
+
+Sedes *-- Sala
+
+Sala o-- ShowSeat
+Sedes o-- Ciudad
+
+class Proyeccion
+Proyeccion: +pelicula
+Proyeccion: +sala
+Proyeccion: +cine
+Proyeccion: +formato
+Proyeccion: +horarios
+
+class Sala
+Sala: +asientos
+
+
+class ShowSeat
+ShowSeat: +reserva
+ShowSeat o-- Reserva
+
+class Reserva
+Reserva: +nro
+Reserva: +nroAsiento
+Reserva: +estado
+Reserva: +nroSala
+Reserva: +nombreSede
+Reserva: Pago()
+Reserva: Recepcion()
+
+class Sistema
+Sistema: Notificar()
+Sistema: +Cine
+Sistema: +Reservas
+Sistema: +Miembros
+Sistema: Reembolso()
+
+Sistema o-- Notificacion
+Sistema *-- Reserva
+Sistema *-- Cine
+Sistema *-- Miembro
+
+class Pago
+Pago: +credito
+Pago: +efectivo
+Pago: +debito
+Pago: +pagoDigital
+
+class Cupon
+Cupon: Descuento()
+Pago o-- Cupon
+
+
+Pago *-- Notificacion
+
+class Notificacion
+Notificacion: +email
