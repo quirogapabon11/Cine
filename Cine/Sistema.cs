@@ -7,11 +7,26 @@ namespace Cine
 {
     public class Sistema
     {
-        public int Cine { get; set; }
+        public CadenaCine Cine { get; set; }
         public int Reservas { get; set; }
         public int Miembros { get; set; }
 
-        public void Notificar();
-        public void Reembolso();
+
+        public void Notificar()
+        {
+
+        }
+
+        public void Reembolso()
+        {
+
+        }
+
+        public Sistema(CadenaCine cine, int reservas, int miembros)
+        {
+            this.Cine = cine;
+            this.Reservas = reservas;
+            this.Miembros = miembros;
+        }
     }
 }

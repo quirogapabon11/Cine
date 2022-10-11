@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Cine
 {
-    public class Ciudad
+    public class Invitado
     {
-        public int NroSede { get; set; }
-        public Ciudad(int nroSede)
+        public int Edad { get; set; }
+        public Invitado(int edad)
         {
-            this.NroSede = nroSede;
+            this.Edad = edad;
         }
     }
 }

@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace Cine
 {
-    public class Ciudad
+    public class Notificacion
     {
-        public int NroSede { get; set; }
-        public Ciudad(int nroSede)
+        public string Email { get; set; }
+        public Notificacion(string email)
+
         {
-            this.NroSede = nroSede;
+            this.Email = email;
         }
     }
 }

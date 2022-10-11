@@ -9,7 +9,14 @@ namespace Cine
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string email { get; set; }
-        public string contrasena { get; set; }
+        public string Email { get; set; }
+        public string Contrasena { get; set; }
+        public Usuario(string nombre, string apellido, string email, string contrasena)
+        {
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Email = email;
+            this.Contrasena = contrasena;
+        }
     }
 }

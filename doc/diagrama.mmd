@@ -6,7 +6,7 @@ Miembro: +habilitado
 Miembro: +lista  
 
 Miembro o-- Reserva
-Reserva <|-- Pago
+Reserva *-- Pago
 
 class Usuario
 Usuario: +nombre
@@ -14,8 +14,8 @@ Usuario: +apellido
 Usuario: +email
 Usuario: +contraseña
 
-Usuario <|-- Miembro
-Usuario <|-- Invitado
+Usuario *-- Miembro
+Usuario *-- Invitado
 
 class Invitado
 Invitado: +edad

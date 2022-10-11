@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Cine
 {
     public class Proyeccion
@@ -12,5 +7,13 @@ namespace Cine
         public int Cine { get; set; }
         public string Formato { get; set; }
         public DateTime Horarios { get; set; }
+        public Proyeccion(string pelicula, int sala, int cine, string formato, DateTime horarios)
+        {
+            this.Pelicula = pelicula;
+            this.Sala = sala;
+            this.Cine = cine;
+            this.Formato = formato;
+            this.Horarios = horarios;
+        }
     }
 }

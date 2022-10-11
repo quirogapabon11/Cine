@@ -1,5 +1,11 @@
-﻿namespace Cine;
-public class Sala
+﻿namespace Cine
 {
-    public int Asientos { get; set; }
+    public class Sala
+    {
+        public int Asientos { get; set; }
+        public Sala(int asientos)
+        {
+            this.Asientos = asientos;
+        }
+    }
 }
