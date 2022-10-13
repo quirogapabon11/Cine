@@ -1,0 +1,12 @@
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\bin\Debug\net6.0\Cine.deps.json
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\bin\Debug\net6.0\Cine.dll
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\bin\Debug\net6.0\Cine.pdb
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.csproj.AssemblyReference.cache
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.AssemblyInfoInputs.cache
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.AssemblyInfo.cs
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.csproj.CoreCompileInputs.cache
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.dll
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\refint\Cine.dll
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\Cine.pdb
+C:\Users\ET12Compu\Desktop\Cine\src\Cine\obj\Debug\net6.0\ref\Cine.dll

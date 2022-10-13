@@ -1,4 +1,4 @@
-namespace Cine
+namespace Entidades
 {
     public class Proyeccion
     {

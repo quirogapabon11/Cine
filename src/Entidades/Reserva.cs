@@ -1,5 +1,5 @@
 
-namespace Cine
+namespace Entidades
 {
     public class Reserva
     {
@@ -9,6 +9,7 @@ namespace Cine
         public int NroSala { get; set; }
         public string NombreSede { get; set; }
         public int Proyeccion { get; set; }
+        public List<Pago> Pagos { get; set; }
         public void Pago()
         {
 
@@ -26,6 +27,8 @@ namespace Cine
             this.NroSala = nroSala;
             this.NombreSede = nombreSede;
             this.Proyeccion = proyeccion;
+            this.Pagos = new List<Pago>();
+
         }
     }
 }

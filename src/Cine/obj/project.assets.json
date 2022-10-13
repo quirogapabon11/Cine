@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ET12Compu\\Desktop\\Cine\\Cine\\Cine.csproj",
+      "projectUniqueName": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
       "projectName": "Cine",
-      "projectPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\Cine\\Cine.csproj",
+      "projectPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
       "packagesPath": "C:\\Users\\ET12Compu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\Cine\\obj\\",
+      "outputPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

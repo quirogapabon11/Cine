@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cine
+namespace Entidades
 {
     public class Sede
     {
@@ -13,6 +13,13 @@ namespace Cine
         public string Ciudad { get; set; }
         public string Proyeccion { get; set; }
         public string Pelicula { get; set; }
+        public List<Pelicula> Peliculas { get; set; }
+        public List<Sala> Salas { get; set; }
+
+        public void AgregarPelicula(Pelicula unaPelicula)
+        {
+            this.Peliculas.Add(unaPelicula);
+        }
         public Sede(string nombre, string direccion, int salas, string ciudad, string proyeccion, string pelicula)
         {
             this.Nombre = nombre;
@@ -21,6 +28,11 @@ namespace Cine
             this.Ciudad = ciudad;
             this.Proyeccion = proyeccion;
             this.Pelicula = pelicula;
+            this.Peliculas = new List<Pelicula>();
+            this.Salas = new List<Sala>();
+
+
+
         }
     }
 }

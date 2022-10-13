@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cine
+namespace Entidades
 {
     public class Pago
     {
@@ -12,6 +12,7 @@ namespace Cine
         public bool Debito { get; set; }
         public bool PagoDigital { get; set; }
         public int Descuento { get; set; }
+        public List<Notificacion> Notificaciones { get; set; }
         public void esCredito()
         {
 
@@ -35,6 +36,11 @@ namespace Cine
             this.Debito = debito;
             this.PagoDigital = pagoDigital;
             this.Descuento = descuento;
+            this.Notificaciones = new List<Notificacion>();
+        }
+        public void AgregarCupones(Cupon unCupon)
+        {
+            this.Cupones.Add(unCupon);
         }
     }
 }
