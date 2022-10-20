@@ -6,8 +6,22 @@ namespace Entidades
         public int Reservas { get; set; }
         public int Miembros { get; set; }
         public List<Miembro> Miembros { get; set; }
-        public List<CadenaCine> CadenaCines { get; set; }
+        public List<CadenaCine> CadenasdeCines { get; set; }
+        public List<Notificacion> Notificaciones { get; set; }
 
+        public void AgregarNotificaciones(Notificacion unaNotificacion)
+        {
+            this.Notificaciones.add(unaNotificacion);
+        }
+
+        public void AgregarMiembro(Miembro unMiembro)
+        {
+            this.Miembros.add(unMiembro);
+        }
+        public void AgregarCine(CadenaCine unaCadenaCine)
+        {
+            this.CadenasdeCines.add(unaCadenaCine);
+        }
         public void Notificar()
         {
 
@@ -25,6 +39,8 @@ namespace Entidades
             this.Miembros = miembros;
             this.Miembros = new List<Miembro>();
             this.CadenaCines = new List<CadenaCine>();
+            this.Notificaciones = new List<Notificacion>();
+
         }
     }
 }

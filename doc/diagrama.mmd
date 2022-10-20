@@ -19,12 +19,12 @@ Usuario *-- Invitado
 class Invitado
 Invitado: +edad
 
-class Cine
-Cine: +nombre
-Cine: +sede
+class cadenaCine
+cadenaCine: +nombre
+cadenaCine: +sede
 
 Sede *-- Pelicula
-Cine *-- Miembro
+cadenaCine *-- Miembro
 
 class Sede
 Sede: +nombre
@@ -33,7 +33,7 @@ Sede: +sala
 Sede: +ciudad
 Sede: +proyeccion
 Sede: +pelicula
-Cine *-- Sede
+cadenaCine *-- Sede
 
 
 class Ciudad
@@ -82,13 +82,13 @@ Reserva: Recepcion()
 
 class Sistema
 Sistema: Notificar()
-Sistema: +Cine
+Sistema: +cadenaCine
 Sistema: +Reservas
 Sistema: +Miembros
 Sistema: Reembolso()
 
 Sistema o-- Notificacion
-Sistema *-- Cine
+Sistema *-- cadenaCine
 Sistema *-- Miembro
 
 class Pago

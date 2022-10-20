@@ -8,6 +8,7 @@ namespace Entidades
         public bool PagoDigital { get; set; }
         public int Descuento { get; set; }
         public List<Notificacion> Notificaciones { get; set; }
+        public List<Cupon> Cupones { get; set; }
         public void esCredito()
         {
 
@@ -32,10 +33,17 @@ namespace Entidades
             this.PagoDigital = pagoDigital;
             this.Descuento = descuento;
             this.Notificaciones = new List<Notificacion>();
+            this.Cupones = new List<Cupon>();
         }
         public void AgregarCupones(Cupon unCupon)
         {
             this.Cupones.Add(unCupon);
         }
+
+        public void AgregarNotificaciones(Notificacion unaNotificacion)
+        {
+            this.Notificaciones.add(unaNotificacion);
+        }
+
     }
 }

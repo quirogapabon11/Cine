@@ -10,6 +10,11 @@ namespace Entidades
         public string NombreSede { get; set; }
         public int Proyeccion { get; set; }
         public List<Pago> Pagos { get; set; }
+
+        public void AgregarPago(Pago unPago)
+        {
+            this.Pagos.add(unPago);
+        }
         public void Pago()
         {
 

@@ -15,12 +15,8 @@ namespace Entidades
         public string Pelicula { get; set; }
         public List<Pelicula> Peliculas { get; set; }
         public List<Sala> Salas { get; set; }
-
         public List<Ciudad> Ciudades { get; set; }
-
         public List<Proyeccion> Proyecciones { get; set; }
-
-
         public void AgregarPelicula(Pelicula unaPelicula)
         {
             this.Peliculas.Add(unaPelicula);
@@ -50,6 +46,8 @@ namespace Entidades
             this.Pelicula = pelicula;
             this.Peliculas = new List<Pelicula>();
             this.Salas = new List<Sala>();
+            this.Proyecciones = new List<Proyeccion>();
+            this.Ciudades = new List<Ciudad>();
 
 
 
