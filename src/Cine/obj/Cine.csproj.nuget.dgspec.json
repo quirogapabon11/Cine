@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj": {}
+    "C:\\Users\\Jonathan\\Desktop\\Cine\\src\\Cine\\Cine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj": {
+    "C:\\Users\\Jonathan\\Desktop\\Cine\\src\\Cine\\Cine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
+        "projectUniqueName": "C:\\Users\\Jonathan\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
         "projectName": "Cine",
-        "projectPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
-        "packagesPath": "C:\\Users\\ET12Compu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ET12Compu\\Desktop\\Cine\\src\\Cine\\obj\\",
+        "projectPath": "C:\\Users\\Jonathan\\Desktop\\Cine\\src\\Cine\\Cine.csproj",
+        "packagesPath": "C:\\Users\\Jonathan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jonathan\\Desktop\\Cine\\src\\Cine\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ET12Compu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Jonathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Jonathan\\Desktop\\novit\\source\\development\\nordelta-nuget\\Nordelta.Sso\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
