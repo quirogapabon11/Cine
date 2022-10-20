@@ -1,4 +1,4 @@
-namespace Entidades
+namespace Cine.Entidades
 {
     public class Pago
     {
@@ -42,7 +42,7 @@ namespace Entidades
 
         public void AgregarNotificaciones(Notificacion unaNotificacion)
         {
-            this.Notificaciones.add(unaNotificacion);
+            this.Notificaciones.Add(unaNotificacion);
         }
 
     }

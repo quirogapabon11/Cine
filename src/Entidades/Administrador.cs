@@ -1,5 +1,5 @@
 
-namespace Entidades
+namespace Cine.Entidades
 {
     public class Administrador : Usuario
     {
@@ -13,18 +13,27 @@ namespace Entidades
 
         public void AgregarSistema(Sistema unSistema)
         {
-            this.Sistemas.add(unSistema);
+            this.Sistemas.Add(unSistema);
         }
-        public void DardeAlta()
+        public void DardeAltaPelicula(Pelicula unaPelicula)
         {
-
+            this.Peliculas.Add(unaPelicula);
         }
 
-        public void DardeBaja()
+        public void DardeBajaPelicula(Pelicula unaPelicula)
         {
-
+            this.Peliculas.Remove(unaPelicula);
         }
 
+        public void DardeAltaFuncion(Sede unaSede)
+        {
+            this.Sedes.Add(unaSede);
+        }
+
+        public void DardeBajaFuncion(Sede unaSede)
+        {
+            this.Sedes.Remove(unaSede);
+        }
 
     }
 }

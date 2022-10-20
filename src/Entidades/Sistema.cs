@@ -1,4 +1,4 @@
-namespace Entidades
+namespace Cine.Entidades
 {
     public class Sistema
     {
@@ -16,11 +16,11 @@ namespace Entidades
 
         public void AgregarMiembro(Miembro unMiembro)
         {
-            this.Miembros.add(unMiembro);
+            this.Miembros.Add(unMiembro);
         }
         public void AgregarCine(CadenaCine unaCadenaCine)
         {
-            this.CadenasdeCines.add(unaCadenaCine);
+            this.CadenasdeCines.Add(unaCadenaCine);
         }
         public void Notificar()
         {

@@ -1,4 +1,4 @@
-namespace Entidades
+namespace Cine.Entidades
 {
     public class Miembro
     {

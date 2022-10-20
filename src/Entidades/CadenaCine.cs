@@ -1,4 +1,4 @@
-namespace Entidades
+namespace Cine.Entidades
 {
     public class CadenaCine
     {
@@ -20,7 +20,7 @@ namespace Entidades
 
         public void AgregarMiembros(Miembro unMiembro)
         {
-            this.Miembros.add(unMiembro);
+            this.Miembros.Add(unMiembro);
         }
     }
 }

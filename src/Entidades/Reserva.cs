@@ -1,5 +1,5 @@
 
-namespace Entidades
+namespace Cine.Entidades
 {
     public class Reserva
     {
@@ -13,7 +13,7 @@ namespace Entidades
 
         public void AgregarPago(Pago unPago)
         {
-            this.Pagos.add(unPago);
+            this.Pagos.Add(unPago);
         }
         public void Pago()
         {
