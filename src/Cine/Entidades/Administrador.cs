@@ -4,6 +4,8 @@ namespace Cine.Entidades
     public class Administrador : Usuario
     {
         public List<Sistema> Sistemas { get; set; }
+        public List<Pelicula> Peliculas { get; set; }
+        public List<Sede> Sedes { get; set; }
 
         public Administrador(string nombre, string apellido, string email, string contrasena)
             : base(nombre, apellido, email, contrasena)

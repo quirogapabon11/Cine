@@ -11,11 +11,11 @@ namespace Cine.Entidades
 
         public void AgregarMiembro(Miembro unMiembro)
         {
-            this.Miembros.add(unMiembro);
+            this.Miembros.Add(unMiembro);
         }
         public void AgregarInvitado(Invitado unInvitado)
         {
-            this.Invitados.add(unInvitado);
+            this.Invitados.Add(unInvitado);
         }
         public Usuario(string nombre, string apellido, string email, string contrasena)
         {
