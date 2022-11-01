@@ -10,10 +10,6 @@ namespace Cine.Entidades
         public DateTime Lanzamiento { get; set; }
         public string Calidad { get; set; }
         public bool Duracion { get; set; }
-        public void Administrador()
-        {
-
-        }
         public Pelicula(string titulo, string descripcion, string idioma, string genero, DateTime lanzamiento, string calidad, bool duracion)
         {
             this.Titulo = titulo;
