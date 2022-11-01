@@ -7,7 +7,11 @@ namespace Cine.Entidades
         public List<Pelicula> Peliculas { get; set; }
         public List<Sede> Sedes { get; set; }
 
-        public Administrador(string nombre, string apellido, string email, string contrasena)
+        public Administrador(
+            string nombre,
+            string apellido,
+            string email,
+            string contrasena)
             : base(nombre, apellido, email, contrasena)
         {
             this.Sistemas = new List<Sistema>();
@@ -27,15 +31,12 @@ namespace Cine.Entidades
             this.Peliculas.Remove(unaPelicula);
         }
 
-        public void DardeAltaFuncion(Sede unaSede)
+        public void DardeAltaFuncion(Sede unaSede, Proyeccion unaProyeccion)
         {
-            this.Sedes.Add(unaSede);
+            unaSede.AgregarProyeccion(unaProyeccion);
         }
 
-        public void DardeBajaFuncion(Sede unaSede)
-        {
-            this.Sedes.Remove(unaSede);
-        }
+        public void DardeBajaFuncion(Sede unaSede, Proyeccion unaProyeccion) => unaSede.DardeBajaProyeccion();
 
     }
 }

@@ -48,5 +48,10 @@ namespace Cine.Entidades
 
 
         }
+
+        internal void DardeBajaProyeccion()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

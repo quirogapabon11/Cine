@@ -17,6 +17,11 @@
             this.Proyecciones.Add(unaProyeccion);
         }
 
+        public void DardeBajaProyeccion(Proyeccion unaProyeccion)
+        {
+            this.Proyecciones.Remove(unaProyeccion);
+        }
+
         public Sala(int asientos)
         {
             this.Asientos = asientos;
