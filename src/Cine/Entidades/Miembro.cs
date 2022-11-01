@@ -1,27 +1,20 @@
-namespace Cine.Entidades
+namespace Cine.Entidades;
+
+public class Miembro
 {
-    public class Miembro
+    public Guid Id { get; set; }
+    public bool Habilitado { get; set; } = false;
+    public List<Reserva> Reservas { get; set; }
+
+    public void AgregarReserva(Reserva unaReserva)
     {
-        public Guid Id { get; set; }
-        public string Habilitado { get; set; }
-        public string Lista { get; set; }
+        this.Reservas.Add(unaReserva);
+    }
 
-        public List<Reserva> Reservas { get; set; }
-
-        public void AgregarReserva(Reserva unaReserva)
-        {
-            this.Reservas.Add(unaReserva);
-        }
-
-
-
-        public Miembro(string habilitado, string lista)
-        {
-            this.Habilitado = habilitado;
-            this.Lista = lista;
-            this.Reservas = new List<Reserva>();
-
-        }
-
+    public Miembro(bool habilitado)
+    {
+        this.Habilitado = habilitado;
+        this.Id = Guid.NewGuid();
+        this.Reservas = new List<Reserva>();
     }
 }
