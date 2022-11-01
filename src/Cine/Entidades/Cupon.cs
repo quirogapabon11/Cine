@@ -2,11 +2,11 @@ namespace Cine.Entidades
 {
     public class Cupon
     {
-        public bool descuento { get; set; }
+        public int Descuento { get; set; }
 
-        public Cupon(bool descuento)
+        public Cupon(int Descuento)
         {
-            this.descuento = descuento;
+            this.Descuento = Descuento;
         }
     }
 }

@@ -13,6 +13,16 @@ namespace Cine.Entidades
             this.Miembros = new List<Miembro>();
         }
 
+        public void AgregarMiembros()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AgregarSedes()
+        {
+            throw new NotImplementedException();
+        }
+
         public void AgregarSedes(Sede unaSede)
         {
             this.Sedes.Add(unaSede);
