@@ -1,7 +1,7 @@
 using Cine.Entidades;
 namespace Tests;
 
-public class UsuarioTests
+public class MiembroTests
 {
     [Fact]
     public void Test1()
