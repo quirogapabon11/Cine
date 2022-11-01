@@ -15,14 +15,6 @@ namespace Cine.Entidades
         {
             this.Pagos.Add(unPago);
         }
-        public void Pago()
-        {
-
-        }
-        public void Recepcion()
-        {
-
-        }
 
         public Reserva(int nro, int nroAsiento, bool estado, int nroSala, string nombreSede, Proyeccion proyeccion)
         {
@@ -34,6 +26,11 @@ namespace Cine.Entidades
             this.Proyeccion = proyeccion;
             this.Pagos = new List<Pago>();
 
+        }
+
+        public void AgregarPago()
+        {
+            throw new NotImplementedException();
         }
     }
 }
