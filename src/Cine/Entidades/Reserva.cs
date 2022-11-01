@@ -5,10 +5,10 @@ namespace Cine.Entidades
     {
         public int Nro { get; set; }
         public int NroAsiento { get; set; }
-        public bool Estado { get; set; }
+        public bool Estado { get; set; } = false;
         public int NroSala { get; set; }
         public string NombreSede { get; set; }
-        public int Proyeccion { get; set; }
+        public Proyeccion Proyeccion { get; set; }
         public List<Pago> Pagos { get; set; }
 
         public void AgregarPago(Pago unPago)
@@ -24,7 +24,7 @@ namespace Cine.Entidades
 
         }
 
-        public Reserva(int nro, int nroAsiento, bool estado, int nroSala, string nombreSede, int proyeccion)
+        public Reserva(int nro, int nroAsiento, bool estado, int nroSala, string nombreSede, Proyeccion proyeccion)
         {
             this.Nro = nro;
             this.NroAsiento = nroAsiento;

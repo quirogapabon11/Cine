@@ -2,35 +2,13 @@ namespace Cine.Entidades
 {
     public class Pago
     {
-        public bool Credito { get; set; }
-        public bool Efectivo { get; set; }
-        public bool Debito { get; set; }
-        public bool PagoDigital { get; set; }
+        public string tipoPago { get; set; }
         public int Descuento { get; set; }
         public List<Notificacion> Notificaciones { get; set; }
         public List<Cupon> Cupones { get; set; }
-        public void esCredito()
+        public Pago(string tipoPago, int descuento)
         {
-
-        }
-        public void esEfectivo()
-        {
-
-        }
-        public void esDebito()
-        {
-
-        }
-        public void esQr()
-        {
-
-        }
-        public Pago(bool credito, bool efectivo, bool debito, bool pagoDigital, int descuento)
-        {
-            this.Credito = credito;
-            this.Efectivo = efectivo;
-            this.Debito = debito;
-            this.PagoDigital = pagoDigital;
+            this.tipoPago = tipoPago;
             this.Descuento = descuento;
             this.Notificaciones = new List<Notificacion>();
             this.Cupones = new List<Cupon>();
