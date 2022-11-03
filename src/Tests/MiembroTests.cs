@@ -12,8 +12,10 @@ public class MiembroTests
         var reserva = new Reserva(2, 5, false, 1, "jhjhkhg", proyeccion);
         var miembro = new Miembro(true);
 
+
         //Act
         miembro.AgregarReserva(reserva);
+        miembro.CancelarReserva(reserva);
 
         //Assert
         Assert.Contains(reserva, miembro.Reservas);

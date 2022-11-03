@@ -6,6 +6,12 @@ namespace Cine.Entidades
         public List<Sede> Sedes { get; set; }
 
         public List<Miembro> Miembros { get; set; }
+
+        public static void AgregarMiembro(Miembro miembro)
+        {
+            throw new NotImplementedException();
+        }
+
         public CadenaCine(string nombre)
         {
             this.Nombre = nombre;

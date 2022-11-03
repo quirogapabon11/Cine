@@ -5,7 +5,7 @@ namespace Cine.Entidades
     {
         public int Nro { get; set; }
         public int NroAsiento { get; set; }
-        public bool Estado { get; set; } = false;
+        public bool Estado { get; set; } = true;
         public int NroSala { get; set; }
         public string NombreSede { get; set; }
         public Proyeccion Proyeccion { get; set; }
