@@ -9,8 +9,8 @@ namespace Cine.Entidades
         public string Genero { get; set; }
         public DateTime Lanzamiento { get; set; }
         public string Calidad { get; set; }
-        public bool Duracion { get; set; }
-        public Pelicula(string titulo, string descripcion, string idioma, string genero, DateTime lanzamiento, string calidad, bool duracion)
+        public decimal Duracion { get; set; }
+        public Pelicula(string titulo, string descripcion, string idioma, string genero, DateTime lanzamiento, string calidad, decimal duracion)
         {
             this.Titulo = titulo;
             this.Descripcion = descripcion;

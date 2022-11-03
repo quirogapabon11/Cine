@@ -15,14 +15,16 @@ namespace Tests
             Assert.Contains(cupon, pago.Cupones);
         }
 
-        //[Fact]
-        //public void Notificacion_Visualizada()
-        //{
-        //Arrange
-        //var notificacion = Notificacion();
-        //var pago = Pago("Efectivo", 20);
-        //Act
-        //notificacion.Notificacion_Visualizada();
-        //Assert 
+        [Fact]
+        public void AgregarNotificaciones()
+        {
+            //Arrange
+            var notificacion = new Notificacion("voy@rtucasa.com");
+            var pago = new Pago("Efectivo", 20);
+            //Act
+            pago.AgregarNotificaciones(notificacion);
+            //Assert 
+            Assert.Contains(notificacion, pago.Notificaciones);
+        }
     }
 }
