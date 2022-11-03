@@ -2,7 +2,6 @@ namespace Cine.Entidades
 {
     public class Sistema
     {
-        public CadenaCine Cine { get; set; }
         public int Reservas { get; set; }
         public List<Miembro> Miembros { get; set; }
         public List<CadenaCine> CadenasdeCines { get; set; }
@@ -21,19 +20,11 @@ namespace Cine.Entidades
         {
             this.CadenasdeCines.Add(unaCadenaCine);
         }
-        public void Notificar()
+
+
+        public Sistema(int reservas, int miembros)
         {
 
-        }
-
-        public void Reembolso()
-        {
-
-        }
-
-        public Sistema(CadenaCine cine, int reservas, int miembros)
-        {
-            this.Cine = cine;
             this.Reservas = reservas;
             this.Miembros = new List<Miembro>();
             this.CadenasdeCines = new List<CadenaCine>();

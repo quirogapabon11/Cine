@@ -7,22 +7,19 @@ namespace Tests
         [Fact]
         public void AgregarMiembros()
         {
-            var cadenaCine = new CadenaCine("GoCineMax");
-            cadenaCine.AgregarMiembros();
-
-            Assert.Throws<Exception>(() => cadenaCine.AgregarMiembros());
+            var miembro = new Miembro(false);
+            CadenaCine.AgregarMiembro(miembro);
+            Assert.Throws<Exception>(() => CadenaCine.AgregarMiembro(miembro));
 
         }
 
         [Fact]
         public void AgregarSedes()
         {
-            var cadenaCine = new CadenaCine("GoCineMax");
-
-
-            cadenaCine.AgregarSedes();
-
-            Assert.Throws<Exception>(() => cadenaCine.AgregarSedes());
+            var sede = new Sede("Avellaneda", "av.pepe", 4, "Gran BS AS", "Wakanda", "PanterA niga");
+            var cine = new CadenaCine("PepCineMax");
+            cine.AgregarSedes(sede);
+            Assert.Throws<Exception>(() => cine.AgregarSedes(sede));
         }
 
 
