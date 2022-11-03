@@ -49,7 +49,17 @@ namespace Cine.Entidades
 
         }
 
+        public void DardeAltaFuncion(Sede sede)
+        {
+            throw new NotImplementedException();
+        }
+
         internal void DardeBajaProyeccion()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DardeBajaFuncion(Sede sede)
         {
             throw new NotImplementedException();
         }

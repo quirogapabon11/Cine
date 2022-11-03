@@ -15,5 +15,25 @@ namespace Cine.Entidades
             this.Formato = formato;
             this.Horario = horario;
         }
+
+        public void AgregarProyeccion(Proyeccion proyeccion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DardeBajaProyeccion(Proyeccion proyeccion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DardeAltaFuncion(Proyeccion proyeccion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DardeBajaFuncion(Proyeccion proyeccion)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
