@@ -19,7 +19,7 @@ namespace Tests
         public void AgregarNotificaciones()
         {
             //Arrange
-            var notificacion = new Notificacion("voy@rtucasa.com");
+            var notificacion = new Notificacion("Pepe@gmail.com");
             var pago = new Pago("Efectivo", 20);
             //Act
             pago.AgregarNotificaciones(notificacion);

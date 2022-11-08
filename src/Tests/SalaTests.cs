@@ -19,7 +19,7 @@ namespace Tests
         [Fact]
         public void AgregarProyeccion()
         {
-            var proyeccion = new Proyeccion("Pantera Rosa", 2, 3, "2D", DateTime.Now);
+            var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             var sala = new Sala(2);
             var proyecciones = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             sala.AgregarProyeccion(proyecciones);
@@ -29,11 +29,12 @@ namespace Tests
         [Fact]
         public void DardeBajaProyeccion()
         {
-            var proyeccion = new Proyeccion("Pantera Rosa", 2, 3, "2D", DateTime.Now);
+            var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             var sala = new Sala(2);
             var proyecciones = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             sala.DardeBajaProyeccion(proyecciones);
-            Assert.Throws<Exception>(() => sala.DardeBajaProyeccion(proyecciones));
+            // Assert.Throws<Exception>(() => sala.DardeBajaProyeccion(proyecciones));
+            Assert.Contains(proyeccion, sala.Proyecciones);
         }
     }
 }
