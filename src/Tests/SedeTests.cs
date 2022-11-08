@@ -50,13 +50,5 @@ namespace Tests
             //Assert
             Assert.Contains(proyeccion, sede.Proyecciones);
         }
-
-<<<<<<< Updated upstream
-=======
-        //[Fact]
-        //public void
->>>>>>> Stashed changes
     }
-
-
 }
