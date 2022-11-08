@@ -6,10 +6,6 @@
         public List<Reserva> Reservas { get; set; }
         public List<Proyeccion> Proyecciones { get; set; }
 
-        public void AgregarReserva()
-        {
-            throw new NotImplementedException();
-        }
 
         public void AgregarReserva(Reserva unaReserva)
         {
