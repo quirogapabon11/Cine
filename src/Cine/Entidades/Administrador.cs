@@ -36,7 +36,12 @@ namespace Cine.Entidades
             unaSede.AgregarProyeccion(unaProyeccion);
         }
 
-        public void DardeBajaFuncion(Sede unaSede, Proyeccion unaProyeccion) => unaSede.DardeBajaProyeccion();
+        public void DardeBajaFuncion(Sede unaSede, Proyeccion unaProyeccion)
+        {
+            unaSede.RemoveProyeccion(unaProyeccion);
+        }
+
+
 
     }
 }
