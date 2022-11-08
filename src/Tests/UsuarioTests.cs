@@ -10,7 +10,7 @@ public class UsuarioTests
         var usuario = new Usuario("Maria", "Mendez", "mariamendez35@gmail.com", "54io2");
         var miembro = new Miembro(false);
         usuario.AgregarMiembro(miembro);
-        Assert.Throws<Exception>(() => miembro.AgregarMiembro(miembro));
+        Assert.Throws<Exception>(() => usuario.AgregarMiembro(miembro));
 
 
         var invitado = new Invitado(17);

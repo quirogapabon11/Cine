@@ -8,24 +8,27 @@ namespace Tests
         public void AgregarSistema()
         {
             var sistema = new Sistema(3, 3);
-            sistema.AgregarSistema(sistema);
-            Assert.Throws<Exception>(() => sistema.AgregarSistema(sistema));
+            var administrador = new Administrador("Pepe", "rene", "pepR@123", "4444");
+            administrador.AgregarSistema(sistema);
+            Assert.Throws<Exception>(() => administrador.AgregarSistema(sistema));
         }
 
         [Fact]
         public void DardeAltaPelicula()
         {
             var pelicula = new Pelicula("Pantera Rosa", "Acicion/Comedia", "Español", "Acicion/Comedia", DateTime.Now, "3D", 185);
-            pelicula.DardeAltaPelicula(pelicula);
-            Assert.Throws<Exception>(() => pelicula.DardeAltaPelicula(pelicula));
+            var administrador = new Administrador("Pepe", "rene", "pepR@123", "4444");
+            administrador.DardeAltaPelicula(pelicula);
+            Assert.Throws<Exception>(() => administrador.DardeAltaPelicula(pelicula));
         }
 
         [Fact]
         public void DardeBajaPelicula()
         {
             var pelicula = new Pelicula("Pantera Rosa", "Acicion/Comedia", "Español", "Acicion/Comedia", DateTime.Now, "3D", 126);
-            pelicula.DardeBajaPelicula(pelicula);
-            Assert.Throws<Exception>(() => pelicula.DardeBajaPelicula(pelicula));
+            var administrador = new Administrador("Pepe", "rene", "pepR@123", "4444");
+            administrador.DardeBajaPelicula(pelicula);
+            Assert.Throws<Exception>(() => administrador.DardeBajaPelicula(pelicula));
         }
 
         [Fact]

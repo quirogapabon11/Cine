@@ -8,8 +8,12 @@ namespace Tests
         public void AgregarReserva()
         {
             var sala = new Sala(2);
-            sala.AgregarReserva();
-            Assert.Throws<Exception>(() => sala.AgregarReserva());
+            var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
+            var reserva = new Reserva(2, 5, false, 1, "jhjhkhg", proyeccion);
+            sala.AgregarReserva(reserva);
+
+            Assert.Contains(reserva, sala.Reservas);
+            Assert.Throws<Exception>(() => sala.AgregarReserva(reserva));
         }
 
         [Fact]

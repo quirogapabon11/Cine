@@ -51,8 +51,6 @@ namespace Tests
             Assert.Contains(proyeccion, sede.Proyecciones);
         }
 
-        [Fact]
-        public void
     }
 
 

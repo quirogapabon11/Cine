@@ -8,8 +8,9 @@ namespace Tests
         public void AgregarMiembros()
         {
             var miembro = new Miembro(false);
-            CadenaCine.AgregarMiembro(unMiembro);
-            Assert.Throws<Exception>(() => CadenaCine.AgregarMiembro(unMiembro));
+            var cadenaCine = new CadenaCine("CineMAX");
+            cadenaCine.AgregarMiembro(miembro);
+            Assert.Throws<Exception>(() => cadenaCine.AgregarMiembro(miembro));
 
         }
 
@@ -21,8 +22,6 @@ namespace Tests
             cine.AgregarSedes(sede);
             Assert.Throws<Exception>(() => cine.AgregarSedes(sede));
         }
-
-
-
     }
+
 }
