@@ -10,12 +10,6 @@ public class Miembro
     {
         this.Reservas.Add(unaReserva);
     }
-
-    public void AgregarMiembro(Miembro miembro)
-    {
-        throw new NotImplementedException();
-    }
-
     public void CancelarReserva(Reserva unaReserva)
     {
         this.Reservas.Remove(unaReserva);

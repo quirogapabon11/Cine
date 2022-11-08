@@ -43,8 +43,16 @@ namespace Tests
         public void AgregarProyeccion()
         {
             //Arrenge 
-            //var proyeccion = new Proyeccion("Son como niños", 7, );
+            var proyeccion = new Proyeccion("Son como niños", 7, 8, "2D", DateTime.Now);
+            var sede = new Sede("Multiplex", "Balvanera", 5, "Buenos aires", "Son como niños", "Son como niños");
+            //Act
+            sede.AgregarProyeccion(proyeccion);
+            //Assert
+            Assert.Contains(proyeccion, sede.Proyecciones);
         }
+
+        [Fact]
+        public void
     }
 
 

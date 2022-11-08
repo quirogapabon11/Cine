@@ -20,16 +20,6 @@ namespace Cine.Entidades
             this.Calidad = calidad;
             this.Duracion = duracion;
         }
-
-        public void DardeAltaPelicula(Pelicula pelicula)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DardeBajaPelicula(Pelicula pelicula)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

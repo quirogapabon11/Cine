@@ -27,10 +27,5 @@ namespace Cine.Entidades
             this.Pagos = new List<Pago>();
 
         }
-
-        public void AgregarPago()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

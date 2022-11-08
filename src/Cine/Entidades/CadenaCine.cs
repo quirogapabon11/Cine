@@ -7,9 +7,9 @@ namespace Cine.Entidades
 
         public List<Miembro> Miembros { get; set; }
 
-        public static void AgregarMiembro(Miembro miembro)
+        public void AgregarMiembro(Miembro unMiembro)
         {
-            throw new NotImplementedException();
+            this.Miembros.Add(unMiembro);
         }
 
         public CadenaCine(string nombre)
@@ -19,24 +19,9 @@ namespace Cine.Entidades
             this.Miembros = new List<Miembro>();
         }
 
-        public void AgregarMiembros()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AgregarSedes()
-        {
-            throw new NotImplementedException();
-        }
-
         public void AgregarSedes(Sede unaSede)
         {
             this.Sedes.Add(unaSede);
-        }
-
-        public void AgregarMiembros(Miembro unMiembro)
-        {
-            this.Miembros.Add(unMiembro);
         }
     }
 }
