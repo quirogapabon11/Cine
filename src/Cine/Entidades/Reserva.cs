@@ -28,9 +28,6 @@ namespace Cine.Entidades
 
         }
 
-        public void AgregarPago()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

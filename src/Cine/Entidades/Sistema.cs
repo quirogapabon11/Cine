@@ -6,11 +6,6 @@ namespace Cine.Entidades
         public List<Miembro> Miembros { get; set; }
         public List<CadenaCine> CadenasdeCines { get; set; }
 
-        public void AgregarSistema(Sistema sistema)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Notificacion> Notificaciones { get; set; }
 
         public void AgregarNotificaciones(Notificacion unaNotificacion)
