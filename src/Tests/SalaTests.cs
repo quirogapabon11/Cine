@@ -7,6 +7,7 @@ namespace Tests
         [Fact]
         public void AgregarReserva()
         {
+<<<<<<< Updated upstream
             var sala = new Sala(2);
             var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             var reserva = new Reserva(2, 5, false, 1, "jhjhkhg", proyeccion);
@@ -14,6 +15,9 @@ namespace Tests
 
             Assert.Contains(reserva, sala.Reservas);
             Assert.Throws<Exception>(() => sala.AgregarReserva(reserva));
+=======
+            var reserva = new Reserva(8, 15, false, 6, "Sede de Balvanera", );
+>>>>>>> Stashed changes
         }
 
         [Fact]
