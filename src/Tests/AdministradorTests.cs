@@ -36,8 +36,8 @@ namespace Tests
         {
             var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
             var proyeccion = new Proyeccion("Smile", 3, 3, "2D", DateTime.Now);
-            Assert.Throws<Exception>(() => sede.DardeAltaFuncion(sede));
-            Assert.Throws<Exception>(() => proyeccion.DardeAltaFuncion(proyeccion));
+            sede.AgregarProyeccion(proyeccion);
+            Assert.Throws<Exception>(() => sede.AgregarProyeccion(proyeccion));
         }
 
         [Fact]
@@ -45,8 +45,8 @@ namespace Tests
         {
             var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
             var proyeccion = new Proyeccion("Smile", 3, 3, "2D", DateTime.Now);
-            Assert.Throws<Exception>(() => sede.DardeBajaFuncion(sede));
-            Assert.Throws<Exception>(() => proyeccion.DardeBajaFuncion(proyeccion));
+            sede.RemoveProyeccion(proyeccion);
+            Assert.Throws<Exception>(() => sede.RemoveProyeccion(proyeccion));
         }
     }
 }

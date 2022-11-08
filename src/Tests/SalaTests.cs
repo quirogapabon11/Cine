@@ -20,16 +20,20 @@ namespace Tests
         public void AgregarProyeccion()
         {
             var proyeccion = new Proyeccion("Pantera Rosa", 2, 3, "2D", DateTime.Now);
-            proyeccion.AgregarProyeccion(proyeccion);
-            Assert.Throws<Exception>(() => proyeccion.AgregarProyeccion(proyeccion));
+            var sala = new Sala(2);
+            var proyecciones = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
+            sala.AgregarProyeccion(proyecciones);
+            Assert.Throws<Exception>(() => sala.AgregarProyeccion(proyecciones));
         }
 
         [Fact]
         public void DardeBajaProyeccion()
         {
             var proyeccion = new Proyeccion("Pantera Rosa", 2, 3, "2D", DateTime.Now);
-            proyeccion.DardeBajaProyeccion(proyeccion);
-            Assert.Throws<Exception>(() => proyeccion.DardeBajaProyeccion(proyeccion));
+            var sala = new Sala(2);
+            var proyecciones = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
+            sala.DardeBajaProyeccion(proyecciones);
+            Assert.Throws<Exception>(() => sala.DardeBajaProyeccion(proyecciones));
         }
     }
 }

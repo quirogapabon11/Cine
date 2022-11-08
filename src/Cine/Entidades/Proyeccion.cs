@@ -16,24 +16,5 @@ namespace Cine.Entidades
             this.Horario = horario;
         }
 
-        public void AgregarProyeccion(Proyeccion proyeccion)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DardeBajaProyeccion(Proyeccion proyeccion)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DardeAltaFuncion(Proyeccion proyeccion)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DardeBajaFuncion(Proyeccion proyeccion)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

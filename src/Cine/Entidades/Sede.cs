@@ -34,6 +34,11 @@ namespace Cine.Entidades
             this.Proyecciones.Add(unaProyeccion);
         }
 
+        public void RemoveProyeccion(Proyeccion unaProyeccion)
+        {
+            this.Proyecciones.Remove(unaProyeccion);
+        }
+
         public Sede(string nombre, string direccion, int salas, string ciudad, string proyeccion, string pelicula)
         {
             this.Nombre = nombre;
@@ -47,21 +52,6 @@ namespace Cine.Entidades
 
 
 
-        }
-
-        public void DardeAltaFuncion(Sede sede)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void DardeBajaProyeccion()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DardeBajaFuncion(Sede sede)
-        {
-            throw new NotImplementedException();
         }
     }
 }
