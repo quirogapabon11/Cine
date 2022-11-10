@@ -27,8 +27,9 @@ namespace Tests
         {
             var pelicula = new Pelicula("Batman", "Batman es un hombre alto, caucásico, tiene una figura oscura e imponente, posee con cabello negro corto y ojos marrones. Él lleva un traje gris oscuro con el símbolo negro de un murciélago, en medio de el pecho. Batman también usa una capucha negra que lo cubre en todo momento para ocultar su identidad.", "Español", "Accion/Ficcion", DateTime.Now, "2D", 128);
             var administrador = new Administrador("Pepe", "rene", "pepR@123", "4444");
+            administrador.DardeAltaPelicula(pelicula);
             administrador.DardeBajaPelicula(pelicula);
-            Assert.Contains(pelicula, administrador.Peliculas);
+            Assert.DoesNotContain(pelicula, administrador.Peliculas);
         }
 
         [Fact]
@@ -45,8 +46,9 @@ namespace Tests
         {
             var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
             var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
+            sede.AgregarProyeccion(proyeccion);
             sede.RemoveProyeccion(proyeccion);
-            Assert.Contains(proyeccion, sede.Proyecciones);
+            Assert.DoesNotContain(proyeccion, sede.Proyecciones);
         }
     }
 }

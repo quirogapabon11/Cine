@@ -15,7 +15,6 @@ public class MiembroTests
 
         //Act
         miembro.AgregarReserva(reserva);
-        miembro.CancelarReserva(reserva);
 
         //Assert
         Assert.Contains(reserva, miembro.Reservas);

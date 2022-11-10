@@ -38,7 +38,7 @@ namespace Tests
             var Sistema = new Sistema(8, 8);
             Sistema.AgregarCine(cine);
             //Assert.Throws<Exception>(() => Sistema.AgregarCine(cine));
-            Assert.Contains(cine, Sistema.);
+            Assert.Contains(cine, Sistema.CadenasdeCines);
         }
     }
 }

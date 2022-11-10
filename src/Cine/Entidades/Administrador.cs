@@ -15,6 +15,8 @@ namespace Cine.Entidades
             : base(nombre, apellido, email, contrasena)
         {
             this.Sistemas = new List<Sistema>();
+            this.Peliculas = new List<Pelicula>();
+            this.Sedes = new List<Sede>();
         }
 
         public void AgregarSistema(Sistema unSistema)

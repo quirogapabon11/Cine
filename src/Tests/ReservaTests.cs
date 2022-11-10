@@ -8,13 +8,14 @@ namespace Tests
         public void AgregarPago()
         {
             //Arrange
-            var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
+            var proyeccion = new Proyeccion("", 2, 3, "2D", DateTime.Now);
             var reserva = new Reserva(2, 5, false, 1, "jhjhkhg", proyeccion);
             var miembro = new Miembro(true);
             var pago = new Pago("Efectivo", 2000);
 
             //Act
             reserva.AgregarPago(pago);
+            miembro.AgregarReserva(reserva);
 
             //Assert
             Assert.Contains(reserva, miembro.Reservas);
