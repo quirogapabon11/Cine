@@ -1,6 +1,9 @@
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Cine.Entidades
 {
+    [Table("Administrador")]
     public class Administrador : Usuario
     {
         public List<Sistema> Sistemas { get; set; }

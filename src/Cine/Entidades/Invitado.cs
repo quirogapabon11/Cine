@@ -1,5 +1,8 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Invitado")]
     public class Invitado
     {
         public int Edad { get; set; }

@@ -1,5 +1,8 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades;
 
+[Table("Miembro")]
 public class Miembro
 {
     public Guid Id { get; set; }

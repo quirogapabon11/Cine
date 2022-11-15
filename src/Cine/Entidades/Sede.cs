@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Sede")]
     public class Sede
     {
         public string Nombre { get; set; }

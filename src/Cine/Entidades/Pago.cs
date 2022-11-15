@@ -1,5 +1,8 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Pago")]
     public class Pago
     {
         public string tipoPago { get; set; }

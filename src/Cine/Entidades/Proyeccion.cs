@@ -1,5 +1,8 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Proyeccion")]
     public class Proyeccion
     {
         public string Pelicula { get; set; }

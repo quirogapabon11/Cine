@@ -1,6 +1,8 @@
 
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Reserva")]
     public class Reserva
     {
         public int Nro { get; set; }

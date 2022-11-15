@@ -1,5 +1,8 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
+    [Table("Sistema")]
     public class Sistema
     {
         public int Reservas { get; set; }

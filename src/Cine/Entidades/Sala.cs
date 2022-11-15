@@ -1,5 +1,8 @@
-﻿namespace Cine.Entidades
+﻿
+using System.ComponentModel.DataAnnotations.Schema;
+namespace Cine.Entidades
 {
+    [Table("Sala")]
     public class Sala
     {
         public int Asientos { get; set; }
