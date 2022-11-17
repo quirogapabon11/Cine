@@ -1,10 +1,14 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Pago")]
     public class Pago
     {
+        [Key]
+        [Required]
+        public Guid Id { get; protected set; }
         public string tipoPago { get; set; }
         public int Monto { get; set; }
         public List<Notificacion> Notificaciones { get; set; }

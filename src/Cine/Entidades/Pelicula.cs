@@ -1,10 +1,14 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Pelicula")]
     public class Pelicula
     {
+        [Key]
+        [Required]
+        public Guid Id { get; protected set; }
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
         public string Idioma { get; set; }

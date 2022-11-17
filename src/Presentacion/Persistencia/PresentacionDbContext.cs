@@ -1,4 +1,4 @@
-using Dominio.Entidades;
+using Cine.Entidades;
 using Microsoft.EntityFrameworkCore;
 
 namespace Presentacion.Persistencia;
@@ -7,7 +7,7 @@ public class PresentacionDbContext : DbContext
 {
     //Constructor con opciones se va usar para crear la base de datos desde codigo C#
     //SQL -> CREATE DATABASE proyecto_db;
-    public PresentacionDbContext(DbContextOptions<AplicacionDbContext> opciones)
+    public PresentacionDbContext(DbContextOptions<PresentacionDbContext> opciones)
         : base(opciones)
     {
 

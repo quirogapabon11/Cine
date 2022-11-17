@@ -1,10 +1,13 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("CadenaCine")]
     public class CadenaCine
     {
+        [Key]
+        [Required]
         public string Nombre { get; set; }
         public List<Sede> Sedes { get; set; }
 
@@ -26,5 +29,6 @@ namespace Cine.Entidades
         {
             this.Sedes.Add(unaSede);
         }
+
     }
 }

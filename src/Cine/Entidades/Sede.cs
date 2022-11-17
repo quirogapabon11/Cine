@@ -1,10 +1,14 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Sede")]
     public class Sede
     {
+        [Key]
+        [Required]
+        public Guid Id { get; protected set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
@@ -49,6 +53,11 @@ namespace Cine.Entidades
             this.Ciudades = new List<Ciudad>();
 
 
+
+        }
+
+        public Sede()
+        {
 
         }
     }

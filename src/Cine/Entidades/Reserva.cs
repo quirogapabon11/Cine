@@ -1,10 +1,14 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Reserva")]
     public class Reserva
     {
+        [Key]
+        [Required]
+        public Guid Id { get; protected set; }
         public int Nro { get; set; }
         public int NroAsiento { get; set; }
         public bool Estado { get; set; } = true;
@@ -29,5 +33,10 @@ namespace Cine.Entidades
             this.Pagos = new List<Pago>();
 
         }
+        public Reserva()
+        {
+
+        }
+
     }
 }

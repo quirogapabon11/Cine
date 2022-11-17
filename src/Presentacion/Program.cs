@@ -1,5 +1,5 @@
-using Aplicacion.Properties;
 using Microsoft.EntityFrameworkCore;
+using Presentacion.Persistencia;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,17 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var opciones = new DbContextOptionsBuilder<AplicacionDbContext>();
+var connectionString = builder.Configuration.GetConnectionString("Cine");
 
-//a las opciones creadas le asigno las credenciales para conectar la base de datos
+builder.Services.AddDbContext<PresentacionDbContext>(opcion =>
+    opcion.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 30))));
+
+builder.Services.AddDbContext<PresentacionDbContext>();
+
+var opciones = new DbContextOptionsBuilder<PresentacionDbContext>();
+
 opciones.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 30)));
 
-//creo un objeto contexto con las opciones previamente definidas
-var contexto = new AplicacionDbContext(opciones.Options);
+var contexto = new PresentacionDbContext(opciones.Options);
 
-//indico explicitamente que se debe crear nuestro contexto en el motor de base de datos
 contexto.Database.EnsureCreated();
-
 
 var app = builder.Build();
 
@@ -39,14 +42,12 @@ app.MapControllers();
 
 app.Run();
 
-var connectionString = builder.Configuration.GetConnectionString("Cine");
-
 //agrego la configuracion al nuestro contexto AplicacionDbContexto
-builder.Services.AddDbContext<AplicacionDbContext>(opcion =>
+builder.Services.AddDbContext<PresentacionDbContext>(opcion =>
     opcion.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 30))));
 
 //agrego nuestro context AplicacionDbContext al contenedor de objetos
 //con esto el objeto va a ser poder accedido desde cualquier otro objeto
 //particularmente los controladores
-builder.Services.AddDbContext<AplicacionDbContext>();
+builder.Services.AddDbContext<PresentacionDbContext>();
 

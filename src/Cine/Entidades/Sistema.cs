@@ -1,10 +1,14 @@
 
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Sistema")]
     public class Sistema
     {
+        [Key]
+        [Required]
+        public Guid Id { get; protected set; }
         public int Reservas { get; set; }
         public List<Miembro> Miembros { get; set; }
         public List<CadenaCine> CadenasdeCines { get; set; }
@@ -33,6 +37,10 @@ namespace Cine.Entidades
             this.Miembros = new List<Miembro>();
             this.CadenasdeCines = new List<CadenaCine>();
             this.Notificaciones = new List<Notificacion>();
+
+        }
+        public Sistema()
+        {
 
         }
     }
