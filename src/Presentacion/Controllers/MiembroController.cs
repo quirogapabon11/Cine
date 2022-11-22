@@ -1,7 +1,7 @@
-
 using Cine.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Presentacion.Persistencia;
+using Presentacion.ViewModels;
 
 namespace Presentacion.Controllers;
 
@@ -14,6 +14,7 @@ public class MiembroController : ControllerBase
     public MiembroController(PresentacionDbContext context)
     {
         this.context = context;
+
     }
 
     [HttpGet]
@@ -26,7 +27,7 @@ public class MiembroController : ControllerBase
     [HttpPost]
     public ActionResult Post(MiembroViewModel miembro)
     {
-        var nuevoMiembro = new Miembro();
+        var nuevoMiembro = new Miembro(false);
         context.Miembros.Add(nuevoMiembro);
         context.SaveChanges();
         return StatusCode(201, nuevoMiembro);
