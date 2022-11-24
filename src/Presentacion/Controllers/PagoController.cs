@@ -7,11 +7,11 @@ namespace Presentacion.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class SedeController : ControllerBase
+public class PagoController : ControllerBase
 {
     private readonly PresentacionDbContext context;
 
-    public SedeController(PresentacionDbContext context)
+    public PagoController(PresentacionDbContext context)
     {
         this.context = context;
     }
@@ -19,16 +19,16 @@ public class SedeController : ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-        var sedes = context.Sedes.ToList();
-        return Ok(sedes);
+        var pagos = context.Pagos.ToList();
+        return Ok(pagos);
     }
 
     [HttpPost]
-    public ActionResult Post(SedeViewModel sede)
+    public ActionResult Post(PagoViewModel pago)
     {
-        var nuevaSede = new Sede(sede.Nombre, sede.Direccion, sede.Ciudad);
-        context.Sedes.Add(nuevaSede);
+        var nuevoPago = new Pago(pago.tipoPago, pago.Monto);
+        context.Pagos.Add(nuevoPago);
         context.SaveChanges();
-        return StatusCode(201, nuevaSede);
+        return StatusCode(201, nuevoPago);
     }
 }

@@ -18,7 +18,7 @@ namespace Tests
         [Fact]
         public void AgregarSedes()
         {
-            var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
+            var sede = new Sede("Balvanera", "Av.Rivadavia", "Capital Federal");
             var cine = new CadenaCine("PepCineMax");
             cine.AgregarSedes(sede);
             //Assert.Throws<Exception>(() => cine.AgregarSedes(sede));

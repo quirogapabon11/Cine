@@ -10,6 +10,7 @@ namespace Presentacion.VIewModels
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
-        public string Proyeccion { get; set; }
     }
+
+
 }

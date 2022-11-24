@@ -35,7 +35,7 @@ namespace Tests
         [Fact]
         public void DardeAltaFuncion()
         {
-            var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
+            var sede = new Sede("Balvanera", "Av.Rivadavia", "Capital Federal");
             var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             sede.AgregarProyeccion(proyeccion);
             Assert.Contains(proyeccion, sede.Proyecciones);
@@ -44,7 +44,7 @@ namespace Tests
         [Fact]
         public void DardeBajaFuncion()
         {
-            var sede = new Sede("Balvanera", "Av.Rivadavia", 3, "Capital Federal", "Smile", "Smile");
+            var sede = new Sede("Balvanera", "Av.Rivadavia", "Capital Federal");
             var proyeccion = new Proyeccion("Tu abuela", 1, 3, "Lo que sea", DateTime.Now);
             sede.AgregarProyeccion(proyeccion);
             sede.RemoveProyeccion(proyeccion);
