@@ -11,8 +11,8 @@ using Presentacion.Persistencia;
 namespace Presentacion.Persistencia.Migraciones
 {
     [DbContext(typeof(PresentacionDbContext))]
-    [Migration("20221117141828_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20221125183855_asd")]
+    partial class asd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,6 +60,10 @@ namespace Presentacion.Persistencia.Migraciones
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<int>("Descuento")
                         .HasColumnType("int");
@@ -337,10 +341,6 @@ namespace Presentacion.Persistencia.Migraciones
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Proyeccion")
                         .IsRequired()
                         .HasColumnType("longtext");
 

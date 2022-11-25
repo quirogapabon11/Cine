@@ -8,7 +8,7 @@ namespace Tests
         {
             //Arrange
             var pago = new Pago("Efectivo", 20);
-            var cupon = new Cupon(20);
+            var cupon = new Cupon(20, "ASD213");
             //Act
             pago.AgregarCupones(cupon);
             //Assert

@@ -59,6 +59,10 @@ namespace Presentacion.Persistencia.Migraciones
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int>("Descuento")
                         .HasColumnType("int");
 
@@ -335,10 +339,6 @@ namespace Presentacion.Persistencia.Migraciones
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Proyeccion")
                         .IsRequired()
                         .HasColumnType("longtext");
 

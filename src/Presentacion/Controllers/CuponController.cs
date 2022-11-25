@@ -30,7 +30,7 @@ public class CuponController : ControllerBase
     [HttpPost]
     public ActionResult Post(CuponViewModel cupon)
     {
-        var nuevoCupon = new Cupon(cupon.Descuento);
+        var nuevoCupon = new Cupon(cupon.Descuento, cupon.Codigo);
         context.Cupones.Add(nuevoCupon);
         context.SaveChanges();
         return StatusCode(201, nuevoCupon);
