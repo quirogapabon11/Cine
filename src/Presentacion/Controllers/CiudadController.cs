@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Cine.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Presentacion.Persistencia;
@@ -35,4 +31,29 @@ public class CiudadController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaCiudad);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] CiudadViewModel ciudad, Guid id)
+    {
+        var ciudadConCambios = context.Ciudades.FirstOrDefault(x => x.Id == id);
+
+        ciudadConCambios.Actualizar(ciudad.NroSede);
+
+        context.SaveChanges();
+
+        return Ok(ciudadConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var ciudadBorrar = context.Ciudades.FirstOrDefault(x => x.Id == id);
+
+        context.Ciudades.Remove(ciudadBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }
+

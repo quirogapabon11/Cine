@@ -17,5 +17,10 @@ namespace Cine.Entidades
             this.Email = email;
 
         }
+
+        public void Actualizar(string email)
+        {
+            this.Email = email;
+        }
     }
 }

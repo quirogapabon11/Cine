@@ -14,5 +14,10 @@ namespace Cine.Entidades
         {
             this.NroSede = nroSede;
         }
+
+        public void Actualizar(int nroSede)
+        {
+            this.NroSede = nroSede;
+        }
     }
 }

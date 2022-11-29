@@ -35,5 +35,10 @@ namespace Cine.Entidades
             this.Reservas = new List<Reserva>();
             this.Proyecciones = new List<Proyeccion>();
         }
+
+        public void Actualizar(int asientos)
+        {
+            this.Asientos = asientos;
+        }
     }
 }

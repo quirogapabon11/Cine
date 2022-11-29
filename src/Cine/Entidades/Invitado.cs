@@ -14,5 +14,10 @@ namespace Cine.Entidades
         {
             this.Edad = edad;
         }
+
+        public void Actualizar(int edad)
+        {
+            this.Edad = edad;
+        }
     }
 }

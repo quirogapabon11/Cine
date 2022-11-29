@@ -35,4 +35,28 @@ public class NotificacionController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaNotificacion);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] NotificacionViewModel notificacion, Guid id)
+    {
+        var notificacionConCambios = context.Notificaciones.FirstOrDefault(x => x.Id == id);
+
+        notificacionConCambios.Actualizar(notificacion.Email);
+
+        context.SaveChanges();
+
+        return Ok(notificacionConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var notificacionBorrar = context.Notificaciones.FirstOrDefault(x => x.Id == id);
+
+        context.Notificaciones.Remove(notificacionBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }

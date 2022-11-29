@@ -31,4 +31,30 @@ public class PagoController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevoPago);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] PagoViewModel pago, Guid id)
+    {
+        var pagoConCambios = context.Pagos.FirstOrDefault(x => x.Id == id);
+
+        pagoConCambios.Actualizar(pago.Monto);
+
+        context.SaveChanges();
+
+        return Ok(pagoConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var pagoBorrar = context.Pagos.FirstOrDefault(x => x.Id == id);
+
+        context.Pagos.Remove(pagoBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
+
+
 }

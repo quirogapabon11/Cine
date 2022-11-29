@@ -35,4 +35,29 @@ public class InvitadoController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevoInvitado);
     }
+
+
+    [HttpPut]
+    public ActionResult Put([FromBody] InvitadoViewModel invitado, Guid id)
+    {
+        var invitadoConCambios = context.Invitados.FirstOrDefault(x => x.Id == id);
+
+        invitadoConCambios.Actualizar(invitado.Edad);
+
+        context.SaveChanges();
+
+        return Ok(invitadoConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var invitadoBorrar = context.Invitados.FirstOrDefault(x => x.Id == id);
+
+        context.Invitados.Remove(invitadoBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }

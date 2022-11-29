@@ -30,5 +30,9 @@ namespace Cine.Entidades
             this.Notificaciones.Add(unaNotificacion);
         }
 
+        public void Actualizar(int monto)
+        {
+            this.Monto = monto;
+        }
     }
 }

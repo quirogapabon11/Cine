@@ -31,4 +31,28 @@ public class CadenaCineController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaCadenaCine);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] CadenaCineViewModel cadenaCine, Guid id)
+    {
+        var cadenaCineConCambios = context.CadenadeCines.FirstOrDefault(x => x.Id == id);
+
+        cadenaCineConCambios.Actualizar(cadenaCine.Nombre);
+
+        context.SaveChanges();
+
+        return Ok(cadenaCineConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var cadenaCineBorrar = context.CadenadeCines.FirstOrDefault(x => x.Id == id);
+
+        context.CadenadeCines.Remove(cadenaCineBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }

@@ -34,5 +34,6 @@ namespace Cine.Entidades
             this.Invitados = new List<Invitado>();
             this.Miembros = new List<Miembro>();
         }
+
     }
 }

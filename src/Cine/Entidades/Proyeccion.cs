@@ -23,5 +23,13 @@ namespace Cine.Entidades
             this.Horario = horario;
         }
 
+        public void Actualizar(string pelicula, int sala, int cine, string formato, DateTime horario)
+        {
+            this.Pelicula = pelicula;
+            this.Sala = sala;
+            this.Cine = cine;
+            this.Formato = formato;
+            this.Horario = horario;
+        }
     }
 }

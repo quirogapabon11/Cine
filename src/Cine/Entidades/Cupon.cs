@@ -17,5 +17,11 @@ namespace Cine.Entidades
             this.Descuento = Descuento;
             this.Codigo = Codigo;
         }
+
+        public void Actualizar(int descuento, string codigo)
+        {
+            this.Descuento = descuento;
+            this.Codigo = codigo;
+        }
     }
 }

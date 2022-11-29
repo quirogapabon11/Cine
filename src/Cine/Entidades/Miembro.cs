@@ -24,4 +24,9 @@ public class Miembro
         this.Id = Guid.NewGuid();
         this.Reservas = new List<Reserva>();
     }
+
+    public void Actualizar(bool habilitado)
+    {
+        this.Habilitado = habilitado;
+    }
 }

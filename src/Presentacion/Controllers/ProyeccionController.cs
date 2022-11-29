@@ -30,5 +30,29 @@ public class ProyeccionController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaProyeccion);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] ProyeccionViewModel proyeccion, Guid id)
+    {
+        var proyeccionConCambios = context.Proyecciones.FirstOrDefault(x => x.Id == id);
+
+        proyeccionConCambios.Actualizar(proyeccion.Pelicula, proyeccion.Sala, proyeccion.Cine, proyeccion.Formato, proyeccion.Horario);
+
+        context.SaveChanges();
+
+        return Ok(proyeccionConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var proyeccionBorrar = context.Proyecciones.FirstOrDefault(x => x.Id == id);
+
+        context.Proyecciones.Remove(proyeccionBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }
 

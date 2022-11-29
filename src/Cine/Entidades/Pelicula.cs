@@ -26,6 +26,17 @@ namespace Cine.Entidades
             this.Calidad = calidad;
             this.Duracion = duracion;
         }
+
+        public void Actualizar(string titulo, string descripcion, string idioma, string genero, DateTime lanzamiento, string calidad, decimal duracion)
+        {
+            this.Titulo = titulo;
+            this.Descripcion = descripcion;
+            this.Idioma = idioma;
+            this.Genero = genero;
+            this.Lanzamiento = lanzamiento;
+            this.Calidad = calidad;
+            this.Duracion = duracion;
+        }
     }
 
 }

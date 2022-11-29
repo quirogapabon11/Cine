@@ -32,4 +32,27 @@ public class SalaController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaSala);
     }
+    [HttpPut]
+    public ActionResult Put([FromBody] SalaViewModel sala, Guid id)
+    {
+        var salaConCambios = context.Salas.FirstOrDefault(x => x.Id == id);
+
+        salaConCambios.Actualizar(sala.Asientos);
+
+        context.SaveChanges();
+
+        return Ok(salaConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var salaBorrar = context.Salas.FirstOrDefault(x => x.Id == id);
+
+        context.Salas.Remove(salaBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }

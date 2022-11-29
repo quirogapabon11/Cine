@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Cine.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Presentacion.Persistencia;
@@ -35,4 +31,29 @@ public class CuponController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevoCupon);
     }
+
+    [HttpPut]
+    public ActionResult Put([FromBody] CuponViewModel cupon, Guid id)
+    {
+        var cuponConCambios = context.Cupones.FirstOrDefault(x => x.Id == id);
+
+        cuponConCambios.Actualizar(cupon.Descuento, cupon.Codigo);
+
+        context.SaveChanges();
+
+        return Ok(cuponConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var cuponBorrar = context.Cupones.FirstOrDefault(x => x.Id == id);
+
+        context.Cupones.Remove(cuponBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
 }
+

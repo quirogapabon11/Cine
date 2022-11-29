@@ -35,6 +35,13 @@ namespace Cine.Entidades
             this.Proyecciones.Add(unaProyeccion);
         }
 
+        public void Actualizar(string ciudad, string direccion, string nombre)
+        {
+            this.Ciudad = ciudad;
+            this.Direccion = direccion;
+            this.Nombre = nombre;
+        }
+
         public void RemoveProyeccion(Proyeccion unaProyeccion)
         {
             this.Proyecciones.Remove(unaProyeccion);

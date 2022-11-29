@@ -32,4 +32,6 @@ public class UsuarioController : ControllerBase
         return StatusCode(201, nuevoUsuario);
     }
 
+
+
 }

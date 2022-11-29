@@ -8,6 +8,7 @@ namespace Cine.Entidades
     {
         [Key]
         [Required]
+        public Guid Id { get; protected set; }
         public string Nombre { get; set; }
         public List<Sede> Sedes { get; set; }
 
@@ -30,5 +31,9 @@ namespace Cine.Entidades
             this.Sedes.Add(unaSede);
         }
 
+        public void Actualizar(string nombre)
+        {
+            this.Nombre = nombre;
+        }
     }
 }

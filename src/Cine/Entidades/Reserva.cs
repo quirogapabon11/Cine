@@ -38,5 +38,13 @@ namespace Cine.Entidades
 
         }
 
+        public void Actualizar(int nro, int nroAsiento, bool estado, int nroSala, string nombreSede)
+        {
+            this.Nro = nro;
+            this.NroAsiento = nroAsiento;
+            this.Estado = estado;
+            this.NroSala = nroSala;
+            this.NombreSede = nombreSede;
+        }
     }
 }
