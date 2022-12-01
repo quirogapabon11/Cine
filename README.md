@@ -30,7 +30,11 @@ Si deseamos borrar este cambios oprimimos DELETE, luego TRY OUT e ingresar el id
 # Migraciones
 * Para crear la base de datos en MySql se debe traducir desde nuestro contexto (C#) a SQL, para ello debemos realizar una migracion. Esto se debe realizar una unica vez al momento de crear la base de datos.
 * Debemos tipear en el terminal intregrado el siguiente comando.
-* dotnet ef migrations add MigracionInicial --context PresentacionDbContext --output-dir Persistencia/Migraciones --project Presentacion --startup-project Presentacion
+
+```
+dotnet ef migrations add MigracionInicial --context PresentacionDbContext --output-dir Persistencia/Migraciones --project Presentacion --startup-project Presentacion
+```
+
 * Cada vez que ingresemos un nuevo cambio en el contexto. Por ejemplo agregar un nuevo atributo a una entidad. Se debe realizar una nueva migracion con un nombre distinto a los existentes.
 ```
 dotnet ef migrations add UnNuevoCambio --context PresentacionDbContext --output-dir Persistencia/Migraciones --project Presentacion --startup-project Presentacion
