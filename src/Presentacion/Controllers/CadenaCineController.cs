@@ -37,7 +37,7 @@ public class CadenaCineController : ControllerBase
     {
         var cadenaCineConCambios = context.CadenadeCines.FirstOrDefault(x => x.Id == id);
 
-        cadenaCineConCambios.Actualizar(cadenaCine.Nombre);
+        cadenaCineConCambios!.Actualizar(cadenaCine.Nombre);
 
         context.SaveChanges();
 
@@ -49,7 +49,7 @@ public class CadenaCineController : ControllerBase
     {
         var cadenaCineBorrar = context.CadenadeCines.FirstOrDefault(x => x.Id == id);
 
-        context.CadenadeCines.Remove(cadenaCineBorrar);
+        context.CadenadeCines.Remove(cadenaCineBorrar!);
 
         context.SaveChanges();
 

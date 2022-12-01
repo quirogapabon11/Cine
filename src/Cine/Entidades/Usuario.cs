@@ -25,6 +25,15 @@ namespace Cine.Entidades
         {
             this.Invitados.Add(unInvitado);
         }
+
+        public void Actualizar(string apellido, string contrasena, string email, string nombre)
+        {
+            this.Apellido = apellido;
+            this.Contrasena = contrasena;
+            this.Email = email;
+            this.Nombre = nombre;
+        }
+
         public Usuario(string nombre, string apellido, string email, string contrasena)
         {
             this.Nombre = nombre;

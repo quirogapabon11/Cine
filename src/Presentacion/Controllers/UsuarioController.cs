@@ -32,6 +32,30 @@ public class UsuarioController : ControllerBase
         return StatusCode(201, nuevoUsuario);
     }
 
+    [HttpPut]
+    public ActionResult Put([FromBody] UsuarioViewModel usuario, Guid id)
+    {
+        var usuarioConCambios = context.Usuarios.FirstOrDefault(x => x.Id == id);
+
+        usuarioConCambios.Actualizar(usuario.Apellido, usuario.Contrasena, usuario.Email, usuario.Nombre);
+
+        context.SaveChanges();
+
+        return Ok(usuarioConCambios);
+    }
+
+    [HttpDelete]
+    public ActionResult Delete(Guid id)
+    {
+        var usuarioBorrar = context.Usuarios.FirstOrDefault(x => x.Id == id);
+
+        context.Usuarios.Remove(usuarioBorrar);
+
+        context.SaveChanges();
+
+        return NoContent();
+    }
+
 
 
 }
