@@ -56,5 +56,19 @@ public class PagoController : ControllerBase
         return NoContent();
     }
 
+    [HttpPost]
+    public ActionResult AsignarCupon(Guid id, Guid idCupon)
+    {
+        var pago = context.Pagos.FirstOrDefault(x => x.Id == id);
+
+        var cupon = context.Cupones.FirstOrDefault(x => x.Id == idCupon);
+
+        pago.AsignarUn(cupon);
+
+        context.SaveChanges();
+
+        return Ok();
+    }
+
 
 }

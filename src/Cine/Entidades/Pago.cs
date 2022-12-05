@@ -34,5 +34,6 @@ namespace Cine.Entidades
         {
             this.Monto = monto;
         }
+
     }
 }
