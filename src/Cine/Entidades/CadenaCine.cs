@@ -35,5 +35,6 @@ namespace Cine.Entidades
         {
             this.Nombre = nombre;
         }
+
     }
 }
