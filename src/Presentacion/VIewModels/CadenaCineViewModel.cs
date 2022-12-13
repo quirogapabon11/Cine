@@ -9,5 +9,7 @@ namespace Presentacion.VIewModels
     {
         public string Nombre { get; set; }
 
+        public Guid IdCine { get; set; }
+
     }
 }

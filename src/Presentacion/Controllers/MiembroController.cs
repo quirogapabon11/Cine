@@ -32,12 +32,13 @@ public class MiembroController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevoMiembro);
     }
+
     [HttpPut]
     public ActionResult Put([FromBody] MiembroViewModel miembro, Guid id)
     {
         var miembroConCambios = context.Miembros.FirstOrDefault(x => x.Id == id);
 
-        miembroConCambios.Actualizar(miembro.Habilitado);
+        miembroConCambios!.Actualizar(miembro.Habilitado);
 
         context.SaveChanges();
 
@@ -49,7 +50,7 @@ public class MiembroController : ControllerBase
     {
         var miembroBorrar = context.Miembros.FirstOrDefault(x => x.Id == id);
 
-        context.Miembros.Remove(miembroBorrar);
+        context.Miembros.Remove(miembroBorrar!);
 
         context.SaveChanges();
 

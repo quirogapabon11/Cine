@@ -10,24 +10,24 @@ namespace Cine.Entidades
         [Required]
         public Guid Id { get; protected set; }
         public string Pelicula { get; set; }
-        public int Sala { get; set; }
-        public int Cine { get; set; }
+        public Guid IdSala { get; set; }
+        public Guid IdCine { get; set; }
         public string Formato { get; set; }
         public DateTime Horario { get; set; }
-        public Proyeccion(string pelicula, int sala, int cine, string formato, DateTime horario)
+        public Proyeccion(string pelicula, Guid idSala, Guid idCine, string formato, DateTime horario)
         {
             this.Pelicula = pelicula;
-            this.Sala = sala;
-            this.Cine = cine;
+            this.IdSala = idSala;
+            this.IdCine = idCine;
             this.Formato = formato;
             this.Horario = horario;
         }
 
-        public void Actualizar(string pelicula, int sala, int cine, string formato, DateTime horario)
+        public void Actualizar(string pelicula, Guid idSala, Guid idCine, string formato, DateTime horario)
         {
             this.Pelicula = pelicula;
-            this.Sala = sala;
-            this.Cine = cine;
+            this.IdSala = idSala;
+            this.IdCine = idCine;
             this.Formato = formato;
             this.Horario = horario;
         }

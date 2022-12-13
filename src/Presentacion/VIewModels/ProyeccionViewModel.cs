@@ -8,8 +8,8 @@ namespace Presentacion.VIewModels
     public class ProyeccionViewModel
     {
         public string Pelicula { get; set; }
-        public int Sala { get; set; }
-        public int Cine { get; set; }
+        public Guid idSala { get; set; }
+        public Guid idCine { get; set; }
         public string Formato { get; set; }
         public DateTime Horario { get; set; }
     }

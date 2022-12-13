@@ -32,6 +32,21 @@ public class SedeController : ControllerBase
         return StatusCode(201, nuevaSede);
     }
 
+    [HttpPost("/api/Sede/{idSede}/Sala/{idSala}")]
+    public ActionResult AsignarSede(Guid idSede, Guid idSala)
+    {
+        var sedeConCambios = context.Sedes.FirstOrDefault(x => x.Id == idSede);
+
+        var sala = context.Salas.FirstOrDefault(x => x.Id == idSala);
+
+        sedeConCambios.Salas.Add(sala!);
+
+        context.SaveChanges();
+
+        return Ok(sedeConCambios);
+    }
+
+
     [HttpPut]
     public ActionResult Put([FromBody] SedeViewModel sede, Guid id)
     {

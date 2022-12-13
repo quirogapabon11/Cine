@@ -32,6 +32,10 @@ public class SalaController : ControllerBase
         context.SaveChanges();
         return StatusCode(201, nuevaSala);
     }
+
+
+
+
     [HttpPut]
     public ActionResult Put([FromBody] SalaViewModel sala, Guid id)
     {

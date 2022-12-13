@@ -32,6 +32,21 @@ public class UsuarioController : ControllerBase
         return StatusCode(201, nuevoUsuario);
     }
 
+    [HttpPost("/api/Usuario/{idUsuario}/Reserva/{idReserva}")]
+    public ActionResult AsignarPago(Guid idUsuario, Guid idReserva)
+    {
+        var usuarioConCambios = context.Usuarios.FirstOrDefault(x => x.Id == idUsuario);
+
+        var reserva = context.Reservas.FirstOrDefault(x => x.Id == idReserva);
+
+        usuarioConCambios!.Reservas.Add(reserva!);
+
+        context.SaveChanges();
+
+        return Ok(usuarioConCambios);
+    }
+
+
     [HttpPut]
     public ActionResult Put([FromBody] UsuarioViewModel usuario, Guid id)
     {

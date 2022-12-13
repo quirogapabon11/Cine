@@ -25,7 +25,7 @@ public class ProyeccionController : ControllerBase
     [HttpPost]
     public ActionResult Post(ProyeccionViewModel proyeccion)
     {
-        var nuevaProyeccion = new Proyeccion(proyeccion.Pelicula, proyeccion.Sala, proyeccion.Cine, proyeccion.Formato, proyeccion.Horario);
+        var nuevaProyeccion = new Proyeccion(proyeccion.Pelicula, proyeccion.idSala, proyeccion.idCine, proyeccion.Formato, proyeccion.Horario);
         context.Proyecciones.Add(nuevaProyeccion);
         context.SaveChanges();
         return StatusCode(201, nuevaProyeccion);
@@ -36,7 +36,7 @@ public class ProyeccionController : ControllerBase
     {
         var proyeccionConCambios = context.Proyecciones.FirstOrDefault(x => x.Id == id);
 
-        proyeccionConCambios.Actualizar(proyeccion.Pelicula, proyeccion.Sala, proyeccion.Cine, proyeccion.Formato, proyeccion.Horario);
+        proyeccionConCambios.Actualizar(proyeccion.Pelicula, proyeccion.idSala, proyeccion.idCine, proyeccion.Formato, proyeccion.Horario);
 
         context.SaveChanges();
 

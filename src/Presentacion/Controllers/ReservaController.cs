@@ -33,6 +33,20 @@ public class ReservaController : ControllerBase
         return StatusCode(201, nuevaReserva);
     }
 
+    [HttpPost("/api/Reserva/{idReserva}/Pago/{idPago}")]
+    public ActionResult AsignarPago(Guid idReserva, Guid idPago)
+    {
+        var reservaConCambios = context.Reservas.FirstOrDefault(x => x.Id == idReserva);
+
+        var pago = context.Pagos.FirstOrDefault(x => x.Id == idPago);
+
+        reservaConCambios!.Pagos.Add(pago!);
+
+        context.SaveChanges();
+
+        return Ok(reservaConCambios);
+    }
+
     [HttpPut]
     public ActionResult Put([FromBody] ReservaViewModel reserva, Guid id)
     {
