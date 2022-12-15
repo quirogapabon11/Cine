@@ -27,6 +27,5 @@ public class PresentacionDbContext : DbContext
     public DbSet<Reserva> Reservas { get; set; }
     public DbSet<Sala> Salas { get; set; }
     public DbSet<Sede> Sedes { get; set; }
-    public DbSet<Usuario> Usuarios { get; set; }
 
 }

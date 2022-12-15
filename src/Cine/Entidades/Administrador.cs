@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine.Entidades
 {
     [Table("Administrador")]
-    public class Administrador : Usuario
+    public class Administrador : Miembro
     {
         public List<Sistema> Sistemas { get; set; }
         public List<Pelicula> Peliculas { get; set; }

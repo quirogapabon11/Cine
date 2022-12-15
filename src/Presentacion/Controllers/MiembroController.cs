@@ -33,12 +33,28 @@ public class MiembroController : ControllerBase
         return StatusCode(201, nuevoMiembro);
     }
 
+
+    [HttpPost("/api/Miembro/{idMiembro}/Invitado/{idInvitado}")]
+    public ActionResult AsignarInvitado(Guid idMiembro, Guid idInvitado)
+    {
+        var miembroConCambios = context.Miembros.FirstOrDefault(x => x.Id == idMiembro);
+
+        var invitado = context.Invitados.FirstOrDefault(x => x.Id == idInvitado);
+
+        miembroConCambios!.Invitados.Add(invitado!);
+
+        context.SaveChanges();
+
+        return Ok(miembroConCambios);
+    }
+
+
     [HttpPut]
     public ActionResult Put([FromBody] MiembroViewModel miembro, Guid id)
     {
         var miembroConCambios = context.Miembros.FirstOrDefault(x => x.Id == id);
 
-        miembroConCambios!.Actualizar(miembro.Habilitado);
+        miembroConCambios!.Actualizar(miembro.Habilitado, miembro.Apellido, miembro.Contrasena, miembro.Email, miembro.Nombre);
 
         context.SaveChanges();
 
