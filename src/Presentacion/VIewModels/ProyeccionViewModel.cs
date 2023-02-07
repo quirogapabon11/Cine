@@ -12,5 +12,7 @@ namespace Presentacion.VIewModels
         public Guid idCine { get; set; }
         public string Formato { get; set; }
         public DateTime Horario { get; set; }
+
+        public string NroSede { get; set; }
     }
 }
