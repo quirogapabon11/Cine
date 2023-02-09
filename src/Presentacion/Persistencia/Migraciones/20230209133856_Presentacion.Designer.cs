@@ -11,8 +11,8 @@ using Presentacion.Persistencia;
 namespace Presentacion.Persistencia.Migraciones
 {
     [DbContext(typeof(PresentacionDbContext))]
-    [Migration("20221215134610_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20230209133856_Presentacion")]
+    partial class Presentacion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

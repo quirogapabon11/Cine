@@ -8,7 +8,7 @@ namespace Cine.Entidades
     {
         [Key]
         [Required]
-        public Guid Id { get; protected set; }
+        public Guid Id { get; set; }
         public int Asientos { get; set; }
         public List<Reserva> Reservas { get; set; }
         public List<Proyeccion> Proyecciones { get; set; }

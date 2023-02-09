@@ -39,7 +39,7 @@ public class SedeController : ControllerBase
 
         var sala = context.Salas.FirstOrDefault(x => x.Id == idSala);
 
-        sedeConCambios.Salas.Add(sala!);
+        sedeConCambios.AgregarSala(sala);
 
         context.SaveChanges();
 

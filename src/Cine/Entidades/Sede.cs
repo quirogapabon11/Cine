@@ -8,7 +8,7 @@ namespace Cine.Entidades
     {
         [Key]
         [Required]
-        public Guid Id { get; protected set; }
+        public Guid Id { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
@@ -60,7 +60,10 @@ namespace Cine.Entidades
 
         public Sede()
         {
-
+            this.Peliculas = new List<Pelicula>();
+            this.Salas = new List<Sala>();
+            this.Proyecciones = new List<Proyeccion>();
+            this.Ciudades = new List<Ciudad>();
         }
     }
 }
